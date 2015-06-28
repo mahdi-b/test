@@ -1,0 +1,27 @@
+{% extends 'dashing/base.html' %}
+{% load staticfiles %}
+
+
+{% comment %}
+{% block 'stylesheets' %}
+<link rel="stylesheet" href="{% static 'static/css/style.css' %}">
+{% endblock %}
+{% endcomment %}
+
+
+{% comment %}
+{% block 'scripts' %}
+<script type="text/javascript" src="{% static 'static/script.js' %}"></script>
+{% endblock %}
+{% endcomment %}
+
+
+
+{% block 'config_file' %}
+<script type="text/javascript" src="{% static 'users/u' %}{{user.id}}-dashing-config.js"></script>
+{% endblock %}
+
+{%  block 'identity' %}
+<p style="left-margin:50">Hello, {{user}}</p>
+{% endblock %}
+
