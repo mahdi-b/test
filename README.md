@@ -1,0 +1,1 @@
+Default config for one user with userId 1
