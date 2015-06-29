@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from dashing.utils import router
+from .utils import router
 from .widgets import CustomNumberWidget
 from django.views.generic.base import RedirectView
 
-router.register(CustomNumberWidget, 'custom_number_widget', "userId", "sensorId", userId="[A-Za-z0-9_-]+", sensorId="[A-Za-z0-9_-]+")
+router.register(CustomNumberWidget, 'custom_number_widget', "userId", "projectId", 
+                "sensorId", userId="[A-Za-z0-9_-]+", projectId="[A-Za-z0-9_-]+", sensorId="[A-Za-z0-9_-]+")
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
